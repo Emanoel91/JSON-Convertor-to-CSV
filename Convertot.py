@@ -63,7 +63,7 @@ if st.button("▶ Fetch Data"):
                     if not filename.endswith(".csv"):
                         filename += ".csv"
                     csv_data = df.to_csv(index=False, encoding="utf-8")
-                      st.download_button(label="📥 Download CSV File", data=csv_data, file_name=filename, mime="text/csv")
+                    st.download_button(label="📥 Download CSV File", data=csv_data, file_name=filename, mime="text/csv")
         except requests.exceptions.Timeout:
             st.error("⏳ API request timed out.")
         except requests.exceptions.RequestException as e:
